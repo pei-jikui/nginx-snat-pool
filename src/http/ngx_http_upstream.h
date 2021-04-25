@@ -147,8 +147,6 @@ typedef struct {
 } ngx_http_upstream_addr_item_t;
 
 typedef struct {
-    ngx_addr_t                      *addr;
-    ngx_http_complex_value_t        *value;
     /*The item of address could be ip address or value*/
     ngx_array_t                     address;
 #if (NGX_HAVE_TRANSPARENT_PROXY)
