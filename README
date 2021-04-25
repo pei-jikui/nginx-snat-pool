@@ -1,3 +1,9 @@
 
 Documentation is available at http://nginx.org
 
+support multiple hosts for *_bind directives.
+For example for proxy_bind directive:
+
+proxy_bind $var_1 $var_2  <ip_1> ....
+
+The parameters following the directive could be variables or ip address.
