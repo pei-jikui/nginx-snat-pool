@@ -1,9 +1,10 @@
 
 Documentation is available at http://nginx.org
 
-support multiple hosts for *_bind directives.
+support multiple hosts (snat pool) for all kinds of *_bind directives.
+
 For example of proxy_bind directive:
 
 proxy_bind $var_1 $var_2  <ip_1> ....
 
-The parameters following the directive could be mixture of variables and ip addresses.
+The parameters following the directive could be mixture of variables and ip addresses and they will be used as the snat pool of the outgoing connections to upstream servers.
