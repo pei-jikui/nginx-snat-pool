@@ -8,3 +8,5 @@ For example of proxy_bind directive:
 proxy_bind $var_1 $var_2  <ip_1> ....
 
 The parameters following the directive could be mixture of variables and ip addresses and they will be used as the snat pool of the outgoing connections to upstream servers.
+
+So far, the algorithm of choosing the right upstream server is roundrobin which is quit simple and straightforward.  We need to further polish the upstream server choosing algorithm.
