@@ -7,6 +7,14 @@ For example of proxy_bind directive:
 
 proxy_bind $var_1 $var_2  <ip_1> ....
 
-The parameters following the directive could be mixture of variables and ip addresses and they will be used as the snat pool of the outgoing connections to upstream servers.
+The parameters following the directive could be mixture of variables and ip addresses.
+They will be used as the snat pool of the outgoing connections to upstream servers.
 
-So far, the algorithm of choosing the right upstream server is roundrobin which is quit simple and straightforward.  We need to further polish the upstream server choosing algorithm.
+1) So far, the algorithm of choosing the right upstream server is roundrobin which is quit simple and straightforward.  
+We need to further polish the upstream server choosing algorithm.
+
+2) If there are some nonlocal ip address in the pool list, 
+we need to use the nginx native "transparent" parameter for this purpose. 
+At the same time, we need to configure the iptable or
+the policy routing as well.
+
